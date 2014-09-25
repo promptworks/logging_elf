@@ -8,7 +8,7 @@ module LoggingElf
     end
 
     def call(env)
-      @app.call(env).tap do |response|
+      @app.call(env).tap do |_response|
         log_any_rack_exception(env)
       end
     rescue => err

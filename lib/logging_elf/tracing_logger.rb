@@ -37,7 +37,6 @@ module LoggingElf
                         end
     end
 
-
     attr_writer :trace_hash
     def trace_hash
       if @trace_hash.respond_to?(:call)
