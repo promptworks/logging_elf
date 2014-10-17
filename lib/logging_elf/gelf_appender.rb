@@ -12,6 +12,8 @@ module LoggingElf
 
     def initialize(opts = {})
       super 'gelf', opts
+      opts[:graylog_host] ||= LoggingElf.config.graylog_host
+      opts[:graylog_port] ||= LoggingElf.config.graylog_port
       @logger = GELF::Logger.new(
         opts[:graylog_host], opts[:graylog_port], 'WAN')
     end

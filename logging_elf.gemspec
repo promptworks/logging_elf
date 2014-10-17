@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['jeffdeville@gmail.com']
   spec.summary       = 'Logging, Tracing, and Gelf Logging for rails'
   spec.description   = 'Logging, Tracing, and Gelf Logging for rails'
-  spec.homepage      = ''
+  spec.homepage      = 'http://github.com/promptworks/logging_elf'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")

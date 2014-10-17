@@ -9,6 +9,13 @@ module LoggingElf
   end
 
   class Configuration
-    attr_accessor :graylog_host, :graylog_port, :trace_hash, :host
+    # For sending data to graylog
+    attr_accessor :graylog_host, :graylog_port, :host
+
+    # For the tracing logger
+    attr_accessor :trace_hash
+    def host
+      @host ||= Socket.gethostname
+    end
   end
 end
